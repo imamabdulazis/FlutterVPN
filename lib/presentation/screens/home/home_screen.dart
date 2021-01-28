@@ -3,8 +3,10 @@ import 'package:VarxVPN/presentation/components/utility/screen_aware.dart';
 import 'package:VarxVPN/presentation/components/widget/button_gradient.dart';
 import 'package:VarxVPN/presentation/screens/home/local_widget/button_premium.dart';
 import 'package:VarxVPN/presentation/screens/home/local_widget/location.dart';
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -55,12 +57,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Ink(
+                                  decoration: BoxDecoration(
+                                    color: Palette.primaryColor,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
                                   child: InkWell(
                                     onTap: () {},
                                     child: const Padding(
                                       padding: EdgeInsets.all(8.0),
                                       child: Icon(
-                                        CupertinoIcons.bars,
+                                        EvaIcons.gridOutline,
                                         size: 35,
                                         color: Colors.white,
                                       ),
@@ -68,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 ButtonPremium(
-                                  onTap: (){
+                                  onTap: () {
                                     print("IMAM");
                                   },
                                 ),
@@ -133,9 +139,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   const ButtonGradient(
                     title: 'Select The Fastest Server',
                   ),
-                  const ButtonGradient(
-                    title: 'Select The Fastest Server',
-                  ),
                 ],
               ),
             ),
@@ -158,7 +161,7 @@ class _HomeScreenState extends State<HomeScreen> {
           decoration: BoxDecoration(
             color: Colors.white,
             border: Border.all(color: Colors.grey, width: 2),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(15),
           ),
           child: Row(
             children: <Widget>[

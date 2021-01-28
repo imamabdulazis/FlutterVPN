@@ -1,4 +1,5 @@
 import 'package:VarxVPN/presentation/screens/home/home_screen.dart';
+import 'package:VarxVPN/presentation/screens/navigation/navigation.dart';
 import 'package:VarxVPN/presentation/screens/not_found/not_found_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const HomeScreen(),
+      home: Navigation(),
       onUnknownRoute: (RouteSettings rs) => MaterialPageRoute(
         builder: (context) => NotFoundScreen(),
       ),
